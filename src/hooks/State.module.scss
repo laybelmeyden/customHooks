@@ -1,0 +1,64 @@
+.flex {
+  display: flex;
+  gap: 30px;
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
+  .square{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+  }
+  .squareBlue{
+    background-color: blue;
+  }
+  ul {
+    list-style: none;
+    overflow-y: auto;
+    padding-right: 10px;
+    li {
+      padding: 20px;
+      background-color: gray;
+      color: white;
+      margin-bottom: 10px;
+      width: 200px;
+      position: relative;
+      span {
+        color: white;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 60px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background-color: brown;
+        padding: 3px;
+        cursor: pointer;
+        position: absolute;
+        &:hover {
+          background: white;
+          color: brown;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+.scolling {
+  height: 400px;
+  align-items: normal;
+}
+h1 {
+  text-align: center;
+}
+.flex_one{
+  text-align: center;
+  .contered{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+}

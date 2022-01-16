@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+}
+section {
+  margin-bottom: 30px;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: brown;
+}
+button {
+  border: 0px;
+  cursor: pointer;
+  padding: 20px;
+}
+.scrollingContainer{
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  .scrolling{
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    div{
+      width: 90%;
+      padding: 20px;
+      border: 1px solid red;
+      background: white;
+      cursor: pointer;
+      margin: 3px 0;
+      position: relative;
+      padding-left: 70px;
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 100%;
+      }
+      &.active{
+        background: red;
+        color: white;
+      }
+    }
+  }
+}
+.centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

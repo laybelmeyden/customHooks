@@ -17,13 +17,16 @@ const HookUseRef = () => {
   };
   const diskoGo = () => {
     setSquareDiskoCircle((e) => !e);
+    window.scrollTo(100000000000, 0)
     const audio = new Audio(SongPhonk);
     audio.play();
     setInterval(() => {
       const randomColor = "#" + (((1 << 24) * Math.random()) | 0).toString(16);
       setSquareDisko(randomColor);
     }, 300);
+    document.documentElement.webkitRequestFullscreen();
   };
+
   return (
     <div>
       <div className={`${StateScss.flex_one}`}>
@@ -53,6 +56,7 @@ const HookUseRef = () => {
               <img src={shrek1} alt="" className={scuareDark.shrek2} />
               <img src={shrek1} alt="" className={scuareDark.shrek2_2} />
               <img src={shrek3} alt="" className={scuareDark.shrek6} />
+              <img src={shrek2} alt="" className={scuareDark.shrek22} />
             </div>
           )}
           {!squareDiskoCircle && (
@@ -66,6 +70,12 @@ const HookUseRef = () => {
               <div className={scuareDark.circleItem}></div>
               <div className={scuareDark.circleItem}></div>
             </section>
+          )}
+          {!squareDiskoCircle && (
+            <>
+              <img src={shrek1} alt="" className={StateScss.shrekKrug} />
+              <img src={shrek1} alt="" className={StateScss.shrekKrug2} />
+            </>
           )}
         </div>
         <button onClick={diskoGo} ref={fulls}>

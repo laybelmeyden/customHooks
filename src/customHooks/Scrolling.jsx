@@ -1,6 +1,6 @@
 import React from "react";
 import scssMain from "./../hooks/Main.module.scss";
-import UseScrolling from "./UseScrolling";
+import useScrolling from "./UseScrolling";
 
 const Scrolling = () => {
   const [item, setItem] = React.useState([]);
@@ -8,9 +8,11 @@ const Scrolling = () => {
   const limit = 10;
   const parentRef = React.useRef();
   const childRef = React.useRef();
-  const scroll = UseScrolling(parentRef, childRef, () =>
+
+  useScrolling(parentRef, childRef, () =>
     fetchingItem(limit, page)
   );
+
   const fetchingItem = async () => {
     const response = await fetch(
       `https://jsonplaceholder.typicode.com/todos?_limit=${limit}&_page=${page}`

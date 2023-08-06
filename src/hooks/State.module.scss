@@ -46,6 +46,51 @@
     }
   }
 }
+.anchous {
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  right: 0;
+  z-index: 99999;
+  height: 100%;
+
+  animation: alternate lench 2s linear infinite;
+}
+.shrekKrug {
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  right: 0;
+  z-index: 99999;
+  height: 100%;
+
+}
+
+.shrekKrug2 {
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  right: 0;
+  z-index: 99999;
+  height: 100%;
+  transform: scaleX(-1)
+}
+
+@keyframes lench {
+  0% {
+   font-size: 20px;
+  }
+  100% {
+    font-size: 100px;
+  }
+}
+
 .scolling {
   height: 400px;
   align-items: normal;
@@ -60,5 +105,6 @@ h1 {
     width: 100%;
     height: 100vh;
     top: 0;
+    overflow: hidden;
   }
 }

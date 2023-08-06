@@ -15,7 +15,7 @@ const UseScrolling = (parentRef, childRef, callback) => {
     }, options);
     observer.current.observe(childRef.current);
     return () => observer.current.unobserve(childRef.current);
-  }, [callback]);
+  }, [callback, childRef, parentRef]);
 };
 
 export default UseScrolling;
